@@ -1,6 +1,6 @@
-import React, { useContext} from 'react';
+
 import { useParams } from 'react-router';
-import { singleContext } from '../../App';
+
 import '../../../node_modules/react-bootstrap';
 import '../../../node_modules/react-youtube';
 import YouTube from 'react-youtube';
@@ -38,8 +38,8 @@ const SingleCourse = () => {
     const { title,institute, rating, totalRate, lebel, price, description,videoId, payLink, review1, review2, review3, review4, uname1, uname2, uname3, uname4, uimg1, uimg2, uimg3, uimg4} = findMatch; 
                                                    
     return (
-        <>
-
+   
+<>
         <section className='container my-lg-12'>
         <div className='row'>
             {/* banner left part text */}
@@ -212,8 +212,8 @@ const SingleCourse = () => {
 
 </section>
 
+</>
 
-    </>
     
  );
 };
