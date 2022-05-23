@@ -1,6 +1,5 @@
-import React, { useContext} from 'react';
 import { useParams } from 'react-router';
-import { singleContext } from '../../App';
+import React from 'react';
 import '../../../node_modules/react-bootstrap';
 import '../../../node_modules/react-youtube';
 import YouTube from 'react-youtube';
