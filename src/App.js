@@ -13,6 +13,12 @@ import SingleCourse from './components/SingleCourse/SingleCourse';
 import { createContext, useEffect, useState } from 'react';
 import ScaleLoader from "react-spinners/ScaleLoader";
 import courseData from "./data/fakeCourses.json"
+import {googleTimeApiMethods} from './utils/google-utils-files/google-time-api'
+// import {  googleAnalyticsActions} from './utils/google-analytics/google-analytics-init'
+// import { webVitalActions} from './utils/google-analytics/google-analytics-get-web-vitals'
+import ReactGA from "react-ga";
+ReactGA.initialize("G-HS4E6H0Y4B");
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 // for drilling context
 export const singleContext = createContext('');
@@ -25,6 +31,13 @@ function App() {
       setLoading(false);
     },4000)
   },[])
+  useEffect(() => {
+    googleTimeApiMethods.getLocalTimeZone()
+    // ReactGA.initialize("UA-191797355-1");
+    // ReactGA.pageview(window.location.pathname + window.location.search);
+    // ReactGA.initialize("UA-191680881-1");
+    // ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
   // store loaded data 
   const [courses, setCourses] = useState([])
   //call the api and load all data for set context value
