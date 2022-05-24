@@ -12,11 +12,11 @@ import Account from './components/Account/Account';
 import SingleCourse from './components/SingleCourse/SingleCourse';
 import { createContext, useEffect, useState } from 'react';
 import ScaleLoader from "react-spinners/ScaleLoader";
-import courseData from "./data/fakeCourses.json"
-import {googleTimeApiMethods} from './utils/google-utils-files/google-time-api'
+import courseData from "./data/fakeCourses.json";
+import {googleTimeApiMethods} from '../utils/google-analytics/google-analytics-api';
 // import {  googleAnalyticsActions} from './utils/google-analytics/google-analytics-init'
 // import { webVitalActions} from './utils/google-analytics/google-analytics-get-web-vitals'
-import ReactGA from "react-ga";
+import ReactGA from "../node_modules/react-ga";
 ReactGA.initialize("G-HS4E6H0Y4B");
 ReactGA.pageview(window.location.pathname + window.location.search);
 
